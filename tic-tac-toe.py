@@ -1,5 +1,29 @@
 from tkinter import *
-
+def printWinner():
+     if player=="X":
+           print("Winner : O")
+     elif player=="O":
+           print("Winner : X")
+     quit()
+​
+def winLost():
+     if list[0]["text"] == list[1]["text"] == list[2]["text"] != "     ":
+           printWinner()
+     elif list[3]["text"] == list[4]["text"] == list[5]["text"] != "     ":
+           printWinner()
+     elif list[6]["text"] == list[7]["text"] == list[8]["text"] != "     ":
+           printWinner()
+     elif list[0]["text"] == list[3]["text"] == list[6]["text"] != "     ":
+           printWinner()
+     elif list[1]["text"] == list[4]["text"] == list[7]["text"] != "     ":
+           printWinner()
+     elif list[2]["text"] == list[5]["text"] == list[8]["text"] != "     ":
+           printWinner()
+     elif list[0]["text"] == list[4]["text"] == list[8]["text"] != "     ":
+           printWinner()
+     elif list[2]["text"] == list[4]["text"] == list[6]["text"] != "     ":
+           printWinner()
+​
 def checked(i) :
       global player
       button = list[i]
